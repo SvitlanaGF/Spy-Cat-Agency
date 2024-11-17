@@ -1,0 +1,12 @@
+{% extends 'missions/mission_base.html' %}
+{% block content %}
+	<h1>Mission {{ mission.name }}</h1>
+    <h2>For {{ mission.cat }}</h2>
+    <hr>
+    {% for target in mission.targets %}
+         <h3>Target <a href="{% url 'missions:target_info' target.pk %}">{{ target.name }} </a></h3>
+        <p>{{ target.isComplete }}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

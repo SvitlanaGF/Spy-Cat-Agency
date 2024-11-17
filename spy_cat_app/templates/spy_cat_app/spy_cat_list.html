@@ -1,0 +1,8 @@
+{% extends 'spy_cat_app/spy_cat_base.html' %}
+{% block container %}
+    {% for spy_cat in spy_cat_list %}
+        {% include "spy_cat_app/spy_cat_info.html" %}
+        <p></p>
+    {% endfor %}
++
+{% endblock %}

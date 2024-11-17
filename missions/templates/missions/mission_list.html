@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Missions</title>
+</head>
+<body>
+<h1>Missions</h1>
+    {% for mission in missions %}
+    	<h1>Mission <a href="{% url 'missions:mission_detail' mission.pk %}">{{ mission.name }}</a></h1>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
